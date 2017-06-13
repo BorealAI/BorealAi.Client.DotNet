@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorealAiConsts.cs" />
     <Compile Include="BorealAiRequestFactory.cs" />
     <Compile Include="IBorealAiFluentRequest.cs" />
     <Compile Include="Models\BorealAiRequest.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\BorealAiFluentRequest.cs" />
     <Compile Include="Requests\BorealAiRequestFromIntent.cs" />
+    <Compile Include="Requests\BorealAiRequestGreetings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
