@@ -27,5 +27,26 @@ namespace BorealAI.Client.Requests
 
             return this;
         }
+
+        public IBorealAiFluentRequest WithContext(string contextName, string contextValue)
+        {
+            _request.ContextData.Add(new BorealAiContext
+            {
+                ContextName = contextName,
+                ContextValue = contextValue
+            });
+            return this;
+        }
+
+        public IBorealAiFluentRequest WithOptionalContext(string contextName, string contextValue)
+        {
+            _request.ContextData.Add(new BorealAiContext
+            {
+                ContextName = contextName,
+                ContextValue = contextValue,
+                IsOptional = true
+            });
+            return this;
+        }
     }
 }

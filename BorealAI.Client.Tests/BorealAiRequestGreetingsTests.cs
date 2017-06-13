@@ -42,5 +42,24 @@ namespace BorealAI.Client.Tests
             Assert.IsTrue(entity.EntityName == BorealAiConsts.GreetingsEntityUserName);
             Assert.IsTrue(entity.EntityValue == "Rob");
         }
+
+        [TestMethod]
+        public void CanAddContext()
+        {
+            var request = BorealAiRequestFactory
+                .Greetings
+                .WithContext("testContextName", "testContextValue1")
+                .WithOptionalContext("optionalContext", "textContextValue3");
+
+            var body = request.GetRequestBody();
+
+            Assert.IsNotNull(request);
+            Assert.IsNotNull(body);
+            Assert.AreEqual(2, body.ContextData.Count);
+
+            Assert.IsTrue(body.ContextData.Any(context => context.ContextName == "testContextName"));
+            Assert.IsTrue(body.ContextData.Any(context => context.IsOptional));
+            Assert.IsTrue(body.ContextData.Any(context => context.IsOptional == false));
+        }
     }
 }

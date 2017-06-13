@@ -18,5 +18,7 @@ namespace BorealAI.Client.Models
         [JsonProperty("entities")]
         public List<BorealAiRequestEntity> Entities { get; set; } = new List<BorealAiRequestEntity>();
 
+        [JsonProperty("contextData")]
+        public List<BorealAiContext> ContextData { get; set; } = new List<BorealAiContext>();
     }
 }

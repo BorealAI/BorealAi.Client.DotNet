@@ -7,5 +7,9 @@ namespace BorealAI.Client
         BorealAiRequest GetRequestBody();
 
         IBorealAiFluentRequest WithEntity(string entityName, string entityValue);
+
+        IBorealAiFluentRequest WithContext(string contextName, string contextValue);
+
+        IBorealAiFluentRequest WithOptionalContext(string contextName, string contextValue);
     }
 }

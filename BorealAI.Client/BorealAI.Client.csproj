@@ -46,6 +46,7 @@
     <Compile Include="BorealAiConsts.cs" />
     <Compile Include="BorealAiRequestFactory.cs" />
     <Compile Include="IBorealAiFluentRequest.cs" />
+    <Compile Include="Models\BorealAiContext.cs" />
     <Compile Include="Models\BorealAiRequest.cs" />
     <Compile Include="Models\BorealAiRequestEntity.cs" />
     <Compile Include="Models\BorealAiResponse.cs" />
